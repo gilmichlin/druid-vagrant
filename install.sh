@@ -11,9 +11,9 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y oracle-java7-installer oracle-
 echo "Installing Druid."
 if [ ! -d "druid-services" ]; then
 
-wget --quiet http://static.druid.io/artifacts/releases/druid-0.8.1-bin.tar.gz && \
+wget --quiet http://static.druid.io/artifacts/releases/druid-0.8.2-bin.tar.gz && \
   tar -zxf druid-*.gz && \
-  mv druid-0.8.1 druid &&\
+  mv druid-0.8.2 druid &&\
   mv druid/config druid/config.orig &&\
   cp -r /vagrant/config druid/config &&\
   chown -R vagrant:vagrant druid
