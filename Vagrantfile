@@ -3,7 +3,7 @@ Vagrant.configure(2) do |config|
     druid.vm.network :private_network, ip: "192.168.50.4"
     druid.vm.box = "ubuntu/trusty64"
     druid.vm.provider :virtualbox do |v|
-        v.customize ["modifyvm", :id, "--memory", "4048"]
+        v.customize ["modifyvm", :id, "--memory", "6096"]
         v.customize ["modifyvm", :id, "--cpus", "2"] # druid overlord requires multi-core machine
         v.customize ["modifyvm", :id, "--ioapic", "on"]
     end

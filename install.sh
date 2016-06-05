@@ -23,6 +23,10 @@ wget http://central.maven.org/maven2/org/fusesource/sigar/1.6.4/sigar-1.6.4.jar 
 
 fi
 
+echo "Create Druid data dir"
+mkdir /home/vagrant/druid_data
+chown -R vagrant:vagrant /home/vagrant/druid_data
+
 echo "Installing Zookeeper."
 
 if [ ! -d "zookeeper" ]; then
